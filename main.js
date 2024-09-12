@@ -35,9 +35,10 @@ myTitle.onmouseout = function() {
 
 // Profile section
 myParagraph.onmouseover = function () {
-    myParagraph.textContent = "I am a Web Developer with a passion for creating beautiful and responsive websites. I have experience in HTML, CSS, JavaScript, and React. I am also skilled in project management and public relations.";
+    myParagraph.innerHTML = "<i class='fas fa-laptop-code'></i> I am a Web Developer with a passion for creating beautiful and responsive websites. I have experience in HTML, CSS, JavaScript, and React. I am also skilled in project management and public relations.";
     myParagraph.classList.add('card');
 }
+
 
 myParagraph.onmouseout = function () {
     myParagraph.classList.remove('card');
