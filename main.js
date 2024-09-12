@@ -1,19 +1,70 @@
-myName =document.getElementById('my-name');
-leftSection = document.getElementsByClassName('left-section')[0];
- const myImage = document.getElementsByTagName('img')[0];
+ 
+const myName = document.getElementById('my-name');
+const myTitle = document.getElementById('my-title');
+const myParagraph = document.getElementById('my-paragraph');
+const leftSection = document.getElementsByClassName('left-section')[0];
+const myImage = document.getElementsByTagName('img')[0];
 const contactSection = document.getElementById('contactSection');
 const educationSection = document.getElementById('educationSection');
-function changeName(){
-    this.textContent = " Noura Altuwaim ✨";
-    this.style.color = "red";
-}
-myName.onmouseover = changeName;
-// ot 
-function changeNameBack(){
-    this.textContent = "RICHARD SANCHEZ";
-    this.style.color = "black";
 
+// right section
+ 
+function changeName() {
+    myName.innerHTML = "Noura Altuwaim ✨";  
+    myName.classList.add('my-name-style');
+    myName.classList.remove('name-style');   
 }
+ 
+function changeNameBack() {
+    myName.innerHTML = "<span class='name-style'>RICHARD</span> SANCHEZ";  
+    myName.classList.add('secone-name'); 
+    myName.classList.remove('my-name-style');
+ }
+ 
+myName.addEventListener('mouseover', changeName);
+myName.addEventListener('mouseout', changeNameBack);
+
+myTitle.onmouseover = function() {
+    myTitle.textContent = "Web Developer 🚀"
+    myTitle.style.textAlign = "center"; 
+    
+}
+myTitle.onmouseout = function() {
+    
+    myTitle.innerHTML = "<span class='border-bottom border-4 border-primary'>Marke</span>ting Manager";
+    myTitle.style.textAlign = "start";
+}
+
+myParagraph.onmouseover = function () {
+    myParagraph.textContent = "I am a Web Developer with a passion for creating beautiful and responsive websites. I have experience in HTML, CSS, JavaScript, and React. I am also skilled in project management and public relations."; 
+  
+}
+
+// Function to revert the text or style on mouseout
+myParagraph.onmouseout =function  () {
+    myParagraph.style.color = '';  
+    myParagraph.style.fontWeight = '';
+    myParagraph.textContent =` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam quis nostrud exercitation.`
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 myName.onmouseout = changeNameBack;
 function backgrondColor() {
     leftSection.style.background = "linear-gradient(to right, #d16ba5, #86a8e7, #5ffbf1)";

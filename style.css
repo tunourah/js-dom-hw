@@ -1,1 +1,58 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+  }
+  .left-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+  }
+  .right-section {
+    padding: 20px;
+  }
+  .skills li,
+  .languages li {
+    margin-bottom: 10px;
+  }
+  .work-experience .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #2c3e50;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .title {
+    font-weight: 600;
+    color: #2c3e50;
+    padding: 1%;
+    text-transform: uppercase;
+  }
+  .name-style {
+    color: #808181;
+    font-weight: 800;
+  
+  }
+  .secone-name {
+    font-weight: 100;
+    color: #2c3e50;
+  }
+
+  .my-name-style {
+    font-weight: 700;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    color: #222;
+  }
+  .vertical {
+border: none;
+border-left: 2px solid #2c3e50;  
+height: 100%;
+position: absolute;  
+left: 4px;
+top: 0;}
