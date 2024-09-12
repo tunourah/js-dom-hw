@@ -2,6 +2,7 @@
 const myName = document.getElementById('my-name');
 const myTitle = document.getElementById('my-title');
 const myParagraph = document.getElementById('my-paragraph');
+const experienceCampany = document.getElementById('experience-campany');
 const leftSection = document.getElementsByClassName('left-section')[0];
 const myImage = document.getElementsByTagName('img')[0];
 const contactSection = document.getElementById('contactSection');
@@ -35,12 +36,14 @@ myTitle.onmouseout = function() {
     myTitle.style.textAlign = "start";
 }
 
+
+//profile section
 myParagraph.onmouseover = function () {
     myParagraph.textContent = "I am a Web Developer with a passion for creating beautiful and responsive websites. I have experience in HTML, CSS, JavaScript, and React. I am also skilled in project management and public relations."; 
   
 }
 
-// Function to revert the text or style on mouseout
+ 
 myParagraph.onmouseout =function  () {
     myParagraph.style.color = '';  
     myParagraph.style.fontWeight = '';
@@ -52,17 +55,37 @@ myParagraph.onmouseout =function  () {
 
 
 
+// experience section
+ 
+
+
+
+
+document.getElementById('experienceSection').onmouseover = function() {
+    document.getElementById('experience1').style.display = 'none';
+     
+    document.getElementById('experience2').style.display = 'none';
+    document.getElementById('experience3').style.display = 'none';
+    document.getElementById('experience4').style.display = 'block';
+    document.getElementById('experience4-description').style.display = 'block';
+    document.getElementById('experience4-bullets').style.display = 'block';
+  };
+  
+  document.getElementById('experienceSection').onmouseout = function() {
+    document.getElementById('experience1').style.display = 'block';
+    document.getElementById('experience2').style.display = 'block';
+    document.getElementById('experience3').style.display = 'block';
+    document.getElementById('experience4').style.display = 'none';
+    document.getElementById('experience4-description').style.display = 'none';
+    document.getElementById('experience4-bullets').style.display = 'none';
+  };
+  
 
 
 
 
 
-
-
-
-
-
-
+// left section
 
 
 myName.onmouseout = changeNameBack;
@@ -86,11 +109,18 @@ function changeImage() {
 myImage.onmouseover = changeImage;
  
 contactSection.onmouseout = function() {
+    document.getElementById('phone').innerHTML = '<i class="bi bi-telephone"></i> +123-456-7890';
+    document.getElementById('email').innerHTML = '<i class="bi bi-envelope"></i> hello@reallygreatsite.com';
+    document.getElementById('address').innerHTML = '<i class="bi bi-geo-alt"></i> 123 Anywhere St., Any City';
+    document.getElementById('website').innerHTML = '<i class="bi bi-globe"></i> www.reallygreatsite.com';
+  };
+  contactSection.onmouseover = function() {
     document.getElementById('phone').innerHTML = '<i class="bi bi-telephone"></i> +966 5058529400';
     document.getElementById('email').innerHTML = '<i class="bi bi-envelope"></i> nourahaltuaim@gmail.com';
     document.getElementById('address').innerHTML = '<i class="bi bi-geo-alt"></i> Riyadh City';
     document.getElementById('website').innerHTML = '<i class="bi bi-globe"></i> www.tunora.netlify.app';
   };
+  
   
   // education section 
 
@@ -101,30 +131,39 @@ educationSection.onmouseover = function() {
     document.getElementById('bachelors').innerHTML = '2020 - 2024<br /> <strong> <i>Prince Sattam bin Abdulaziz University 🌟<i> </strong> <br /> Bachelor of Software Engineering  <br /> GPA: 🤖 / 5.0';
   };
 
+  educationSection.onmouseout = function() {
+    document.getElementById('masters').innerHTML = `  2029 - 2030<br />Wardiere University<br />Master of Business Management</p>`;
+    document.getElementById('bachelors').innerHTML = `  2025 - 2029<br />
+    Wardiere University<br />
+    Bachelor of Business<br />
+    GPA: 3.8 / 4.0` ;
+  };
 
-  // skills section
+ 
   // Select the skills and languages sections
 const skillsSection = document.getElementById('skillsSection');
 const languagesSection = document.getElementById('languagesSection');
 
-// Add event listener for mouseover to change Skills
+//  
 skillsSection.onmouseover = function() {
   document.getElementById('skill1').textContent = ' Programming Languages ';
   document.getElementById('skill2').textContent = 'Web Development';
   document.getElementById('skill3').textContent = 'Version Control ';
   document.getElementById('skill4').textContent = 'Software Development ';
   document.getElementById('skill5').textContent = 'Android Development';
-  document.getElementById('skill6').remove();
-  document.getElementById('skill7').remove()
+  document.getElementById('skill6').style.display = 'none'; 
+  document.getElementById('skill7').style.display = 'none'; 
 };
 
-// Revert Skills content on mouseout
+ 
 skillsSection.onmouseout = function() {
   document.getElementById('skill1').textContent = 'Project Management';
   document.getElementById('skill2').textContent = 'Public Relations';
   document.getElementById('skill3').textContent = 'Teamwork';
   document.getElementById('skill4').textContent = 'Time Management';
   document.getElementById('skill5').textContent = 'Leadership';
+  document.getElementById('skill6').style.display = 'block'; 
+  document.getElementById('skill7').style.display = 'block'; 
   document.getElementById('skill6').textContent = 'Effective Communication';
   document.getElementById('skill7').textContent = 'Critical Thinking';
 };
@@ -133,14 +172,15 @@ skillsSection.onmouseout = function() {
 languagesSection.onmouseover = function() {
   document.getElementById('language1').textContent = ' Arabic (Native) ';
   document.getElementById('language2').textContent = 'English(intermediate level)';
-  document.getElementById('language3').remove() ;
-  document.getElementById('language4').remove();
+  document.getElementById('language3').style.display = 'none';  
+  document.getElementById('language4').style.display = 'none';  
 };
-
  
 languagesSection.onmouseout = function() {
   document.getElementById('language1').textContent = 'English (Fluent)';
   document.getElementById('language2').textContent = 'French (Fluent)';
+  document.getElementById('language3').style.display = 'block'; 
+  document.getElementById('languag4').style.display = 'block'; 
   document.getElementById('language3').textContent = 'German (Basic)';
   document.getElementById('language4').textContent = 'Spanish (Intermediate)';
 };
