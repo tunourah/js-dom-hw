@@ -66,11 +66,20 @@ document.getElementById('experienceSection').onmouseout = function() {
 
 // Reference section
 document.getElementById('referenceSection').onmouseover = function() {
-    this.style.display = 'none';
+    referenceSection.style.display = 'none';
+    document.getElementById('project').style.display = 'block';
+    document.getElementById('project-description').classList = 'card';
 }
 document.getElementById('referenceSection').onmouseout = function() {
     this.style.display = 'block';
+    document.getElementById('project').style.display = 'none';
+
+
 }
+
+
+
+
 
 // Left section
 
