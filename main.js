@@ -101,7 +101,7 @@ function changeImage() {
 }
 
 function backImage() {
-    myImage.src = "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/lSC4cMhcQeCjPFkK6qCjSGDSeR3.jpg";
+    myImage.src = "https://amcdmcslc.com/cdn/shop/articles/The-Best-Harvey-Specter-Quotes.jpg?v=1669820579";
     myImage.style.border = "4px solid #fff";
 }
 
