@@ -10,11 +10,8 @@ const educationSection = document.getElementById('educationSection');
 // Right section
 
 function changeName() {
-    myName.innerHTML = "Noura Altuwaim ✨";
-    myName.classList.add('my-name-style');
-    myName.classList.remove('name-style');
+    myName.innerHTML = "<span class='name-style'>Nora</span> Altuwaim ✨";
 }
-
 function changeNameBack() {
     myName.innerHTML = "<span class='name-style'>RICHARD</span> SANCHEZ";
     myName.classList.add('secone-name');
@@ -25,12 +22,11 @@ myName.addEventListener('mouseover', changeName);
 myName.addEventListener('mouseout', changeNameBack);
 
 myTitle.onmouseover = function() {
-    myTitle.textContent = "Web Developer 🚀";
-}
+    myTitle.innerHTML = "<span class='border-bottom border-4 border-primary'>Web</span> Developer 🚀";}
 
 myTitle.onmouseout = function() {
     myTitle.innerHTML = "<span class='border-bottom border-4 border-primary'>Marke</span>ting Manager";
-    myTitle.style.textAlign = "start";
+    
 }
 
 // Profile section
